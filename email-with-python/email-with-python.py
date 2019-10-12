@@ -21,9 +21,8 @@ def bigquery_to_csv(sub_conf):
     query = config.get(sub_conf, 'query')
     filename = config.get(sub_conf, 'filename')
     dialect = config.get(sub_conf, 'dialect')
-    query_date = current_date.strftime("%Y-%m-%d")
 
-    table = pd.read_gbq(query.format(date = query_date), project_id=PROJECT_ID, dialect=dialect, private_key=CREDENTIAL_PATH)
+    table = pd.read_gbq(query, project_id=PROJECT_ID, dialect=dialect, private_key=CREDENTIAL_PATH)
 
     filename = filename + current_date.strftime("%Y%m%d") + ".csv"
     filelist.append(filename)
@@ -67,11 +66,9 @@ msg['Subject'] = "Report"
 htmlEmail = """
 <p> Dear Sir/Madam, <br/><br/>
     Please find the attached Report below.<br/><br/>
-
 <br/></p>
 <p> Please contact XXX directly if you have any questions. <br/>
     Thank you! <br/><br/>
-
     Best Regards, <br/>
     XXX </p>
 <br/><br/>
