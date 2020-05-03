@@ -29,17 +29,3 @@ for folder in tqdm(folders):
                     pass
 
 
-import pandas as pd 
-
-df = pd.read_csv("output.csv")
-df.head()
-
-
-s = open("output.csv", mode='r', encoding='utf-8').read()
-open("output.csv", mode='w', encoding='utf-8-sig').write(s)
-
-
-analyse usage of fb 
-after instagram, snapchat, wechat 
-
-most use word
