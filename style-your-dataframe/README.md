@@ -1,6 +1,6 @@
 # How to style your Dataframe
 
-In this Jupyter notebook, I will be showing you how to style your dataframe with Python.
+In this [Jupyter notebook](https://github.com/chingjunetao/medium-article/blob/master/style-your-dataframe/style-dataframe.ipynb), I will be showing you how to style your dataframe with Python.
 We will cover:
 - Colour the numbers based on conditions
 - Highlight Min/Max/Null
